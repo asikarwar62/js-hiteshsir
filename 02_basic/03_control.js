@@ -65,4 +65,7 @@ const icePrice = 10;
 const result = (icePrice>50)?"paise zyaada hai":"paise kam hai";
 console.log(result);
 
+let val;
+val = undefined ?? 3;
+console.log(val);
 
