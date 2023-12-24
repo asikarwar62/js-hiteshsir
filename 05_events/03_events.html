@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <!-- Today Date And Time
+    <div class="date"></div>
+    <div class="time">Time:</div>
+    <script>
+        const date = new Date();
+        console.log();
+        console.log();
+        const todayDate = document.querySelector(".date");
+        
+        const todayTime = document.querySelector(".time");
+        setInterval(() => {
+            todayDate.innerHTML = date.toLocaleDateString();
+            todayTime.innerHTML = date.toLocaleTimeString();
+        }, 1000); -->
+        <h2>Code</h2>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <div class="div"></div>
+        <div class="div1"></div>
+        <script>
+        const div = document.querySelector(".div");
+        const div1 = document.querySelector(".div1");
+        const start = document.querySelector("#start");
+        const stop = document.querySelector("#stop");
+        let clear;
+        function date(greet){
+            const dt = new Date();
+            div.innerHTML = dt.toLocaleDateString() +`${greet}`;
+            div1.innerHTML = dt.toLocaleTimeString();
+        }
+        function stopTime() {
+            clearInterval(clear);
+        }
+        
+         start.addEventListener("click",()=>{
+             clear = setInterval(date,1000,"hey Good Morning");
+         });
+         stop.addEventListener("click",stopTime);
+        
+    </script>
+</body>
+</html>
